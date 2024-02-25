@@ -1,0 +1,18 @@
+Total Memory Usage:
+
+node_memory_MemTotal_bytes
+
+Memory Free:
+
+node_memory_MemFree_bytes
+
+node_memory_MemTotal_bytes - node_memory_MemFree_bytes
+
+
+Memory Usage Percentage:
+
+(1 - (node_memory_MemFree_bytes / node_memory_MemTotal_bytes)) * 100
+
+Swap Memory Usage:
+
+node_memory_SwapTotal_bytes - node_memory_SwapFree_bytes
