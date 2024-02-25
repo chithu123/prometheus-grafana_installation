@@ -240,7 +240,7 @@ After=network.target
 Type=simple
 ExecStart=/usr/local/bin/alertmanager/alertmanager \
     --config.file=/usr/local/bin/alertmanager/alertmanager.yml \
-    --cluster.advertise-address="server_ip:9093"
+    --cluster.advertise-address="server_ip:9093"   ### This is in promotheus server (must to give) then only alert manager work
 
 [Install]
 WantedBy=multi-user.target
@@ -297,7 +297,7 @@ receivers:
     auth_username: 'ktdhanasekar@gmail.com'
     auth_identity: 'ktdhanasekar@gmail.com'
     auth_password: '***********'
-    send_resolved: true
+    send_resolved: true  ######### it is very important
 inhibit_rules:
   - source_match:
       severity: 'critical'
